@@ -11,17 +11,26 @@
 
 <body>
     <div id="rhino">Helloooooooo</div>
+    <button type="button" id="myButton">Click Me</button>
+
     
     <script>
         function big(){
             rhino.textContent = "gaga" 
             rhino.style.backgroundColor = "lightblue"
             rhino.style.fontSize=Math.random()*100+"px"
-   
-            
+        }
+
+        function formybutton(){
+            const red = Math.floor(Math.random() * 255) + 1
+            const green = Math.floor(Math.random() * 255) + 1
+            const blue = Math.floor(Math.random() * 255) + 1
+            myButton.style.borderRadius = '16px'
+            myButton.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")"
         }
 
         rhino.addEventListener('click',big)
+        myButton.addEventListener('click',formybutton)
 
         //big()
 
